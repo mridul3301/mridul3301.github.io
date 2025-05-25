@@ -5,6 +5,8 @@ import { remark } from "remark"
 import html from "remark-html"
 import remarkGfm from "remark-gfm"
 
+const postsDirectory = path.join(process.cwd(), "content");
+
 // Blog post interface
 export interface BlogPost {
   slug: string
@@ -34,6 +36,20 @@ export interface Topic {
   image: string
   subtopics: Subtopic[]
 }
+
+
+export async function getAllBlogPostSlugs() {
+  // Read all MDX files in the posts directory
+  const files = fs.readdirSync(postsDirectory);
+
+  // Extract slugs from filenames (e.g., post-1.mdx -> post-1)
+  const slugs = files
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => file.replace(/\.mdx$/, ""));
+
+  return slugs;
+}
+
 
 // Function to get all blog posts
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
