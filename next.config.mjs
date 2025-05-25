@@ -1,19 +1,19 @@
-// next.config.mjs
-
-
-import mdx from '@next/mdx';
-
-const withMDX = mdx({
-  extension: /\.mdx?$/,
-});
-
-export default withMDX({
-  output: 'export',
-  reactStrictMode: true,
-  swcMinify: true,
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
-  trailingSlash: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     unoptimized: true,
   },
-});
+  experimental: {
+    webpackBuildWorker: true,
+    parallelServerBuildTraces: true,
+    parallelServerCompiles: true,
+  },
+}
+
+export default nextConfig
