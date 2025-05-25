@@ -38,30 +38,18 @@ export interface Topic {
 }
 
 
-export async function getAllBlogPostSlugs() {
+export async function getAllBlogPostSlugs(): Promise<string[]> {
   try {
-    console.log('Posts directory path:', postsDirectory);
+    const fileNames = fs.readdirSync(postsDirectory)
+    const slugs = fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map(fileName => fileName.replace(/\.md$/, ''))
     
-    // Check if directory exists
-    if (!fs.existsSync(postsDirectory)) {
-      console.error('Posts directory does not exist:', postsDirectory);
-      return [];
-    }
-
-    // Read all MDX files in the posts directory
-    const files = fs.readdirSync(postsDirectory);
-    console.log('Files found in posts directory:', files);
-
-    // Extract slugs from filenames (e.g., post-1.mdx -> post-1)
-    const slugs = files
-      .filter((file) => file.endsWith(".mdx"))
-      .map((file) => file.replace(/\.mdx$/, ""));
-
-    console.log('Generated slugs:', slugs);
-    return slugs;
+    console.log('Generated slugs:', slugs) // Debug log
+    return slugs
   } catch (error) {
-    console.error('Error reading posts directory:', error);
-    return [];
+    console.error('Error reading blog directory:', error)
+    return []
   }
 }
 
