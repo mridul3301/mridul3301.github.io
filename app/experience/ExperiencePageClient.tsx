@@ -157,8 +157,8 @@ export default function ExperiencePage() {
                           variant={exp.type === "education" ? "secondary" : "outline"}
                           className={
                             exp.type === "education"
-                              ? "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100 text-xs md:text-sm shrink-0"
-                              : "bg-blue-100  dark:bg-blue-900 text-xs md:text-sm shrink-0"
+                              ? "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100 text-xs md:text-sm shrink-0 w-fit"
+                              : "bg-blue-100  dark:bg-blue-900 text-xs md:text-sm shrink-0 w-fit"
                           }
                         >
                           {exp.type === "education" ? "Education" : "Work"}
