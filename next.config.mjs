@@ -8,7 +8,7 @@ const withMDX = mdx({
 });
 
 export default withMDX({
-  output: 'export',
+  output: 'standalone',
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
