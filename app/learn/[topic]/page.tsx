@@ -2,10 +2,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, BookOpen } from "lucide-react"
-import { getTopicBySlug } from "@/lib/mdx"
+import { getTopicBySlug, getAllTopicsAndSubtopics } from "@/lib/mdx"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import SubtopicCard from "@/components/subtopic-card"
+
+// Generate static parameters for the dynamic route
+export async function generateStaticParams() {
+  const topics = await getAllTopicsAndSubtopics();
+  return topics.map((topic) => ({ topic: topic.slug }));
+}
 
 export async function generateMetadata({ params }: { params: { topic: string } }): Promise<Metadata> {
   const resolvedParams = await params;
