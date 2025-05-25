@@ -5,7 +5,7 @@ import { remark } from "remark"
 import html from "remark-html"
 import remarkGfm from "remark-gfm"
 
-const postsDirectory = path.join(process.cwd(), "content");
+const postsDirectory = path.join(process.cwd(), "content/blog");
 const contentDirectory = path.join(process.cwd(), "content/learn");
 // Blog post interface
 export interface BlogPost {
@@ -39,15 +39,30 @@ export interface Topic {
 
 
 export async function getAllBlogPostSlugs() {
-  // Read all MDX files in the posts directory
-  const files = fs.readdirSync(postsDirectory);
+  try {
+    console.log('Posts directory path:', postsDirectory);
+    
+    // Check if directory exists
+    if (!fs.existsSync(postsDirectory)) {
+      console.error('Posts directory does not exist:', postsDirectory);
+      return [];
+    }
 
-  // Extract slugs from filenames (e.g., post-1.mdx -> post-1)
-  const slugs = files
-    .filter((file) => file.endsWith(".mdx"))
-    .map((file) => file.replace(/\.mdx$/, ""));
+    // Read all MDX files in the posts directory
+    const files = fs.readdirSync(postsDirectory);
+    console.log('Files found in posts directory:', files);
 
-  return slugs;
+    // Extract slugs from filenames (e.g., post-1.mdx -> post-1)
+    const slugs = files
+      .filter((file) => file.endsWith(".mdx"))
+      .map((file) => file.replace(/\.mdx$/, ""));
+
+    console.log('Generated slugs:', slugs);
+    return slugs;
+  } catch (error) {
+    console.error('Error reading posts directory:', error);
+    return [];
+  }
 }
 
 
