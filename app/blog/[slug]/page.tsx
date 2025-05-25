@@ -2,11 +2,18 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar, ArrowLeft, Twitter, Mail, FileText, Tag } from "lucide-react"
-import { getBlogPostBySlug } from "@/lib/mdx"
+import { getBlogPostBySlug, getAllBlogPostSlugs } from "@/lib/mdx"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { TableOfContents } from "@/components/table-of-contents"
 import BlogContent from "./blog-content"
+
+
+// Generate static parameters for the dynamic route
+export async function generateStaticParams() {
+  const slugs = await getAllBlogPostSlugs(); // Fetch all slugs
+  return slugs.map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const resolvedParams = await params;

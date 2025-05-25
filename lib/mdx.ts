@@ -6,7 +6,7 @@ import html from "remark-html"
 import remarkGfm from "remark-gfm"
 
 const postsDirectory = path.join(process.cwd(), "content");
-
+const contentDirectory = path.join(process.cwd(), "content/learn");
 // Blog post interface
 export interface BlogPost {
   slug: string
@@ -50,6 +50,27 @@ export async function getAllBlogPostSlugs() {
   return slugs;
 }
 
+
+export async function getAllTopicsAndSubtopics() {
+  // Example structure: content/learn/javascript/arrays.mdx, content/learn/javascript/loops.mdx
+  const topicDirs = fs.readdirSync(contentDirectory, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
+
+  const topics = topicDirs.map((topicSlug) => {
+    const subtopicDir = path.join(contentDirectory, topicSlug);
+    const subtopicFiles = fs.readdirSync(subtopicDir)
+      .filter((file) => file.endsWith(".mdx"))
+      .map((file) => file.replace(/\.mdx$/, ""));
+
+    return {
+      slug: topicSlug,
+      subtopics: subtopicFiles.map((subtopicId) => ({ id: subtopicId })),
+    };
+  });
+
+  return topics;
+}
 
 // Function to get all blog posts
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
