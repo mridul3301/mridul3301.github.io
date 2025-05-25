@@ -63,8 +63,8 @@ export async function getAllTopicsAndSubtopics() {
   const topics = topicDirs.map((topicSlug) => {
     const subtopicDir = path.join(contentDirectory, topicSlug);
     const subtopicFiles = fs.readdirSync(subtopicDir)
-      .filter((file) => file.endsWith(".mdx"))
-      .map((file) => file.replace(/\.mdx$/, ""));
+      .filter((file) => file.endsWith(".md"))
+      .map((file) => file.replace(/\.md$/, ""));
 
     return {
       slug: topicSlug,
