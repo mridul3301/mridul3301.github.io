@@ -11,7 +11,7 @@ import { publications } from "@/lib/publications"
 export default function Home() {
   const featuredPublicationIds = [1, 2, 4]
   return (
-    <div className="flex flex-col gap-16 pt-12 pb-16 page-transition">
+    <div className="flex flex-col gap-16 pt-12 pb-16 page-transition ">
     
       {/* Hero Section with Gradient Background */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">

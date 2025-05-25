@@ -122,69 +122,87 @@ const experiences = [
 
 export default function ExperiencePage() {
   return (
-    <div className="container py-16">
-      <div className="flex flex-col gap-12">
+    <div className="container py-8 md:py-16 px-4 md:px-6">
+      <div className="flex flex-col gap-8 md:gap-12">
         <div className="space-y-2">
-          <h1 className="text-4xl font-bold tracking-tight pt-20 page-heading">Experience</h1>
-          <p className="text-xl text-muted-foreground text-center">My academic and professional journey</p>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight pt-12 md:pt-20 page-heading text-center">
+            Experience
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground text-center">
+            My academic and professional journey
+          </p>
         </div>
 
         {/* Timeline */}
-        <div className="relative pl-8 md:pl-12 border-l">
+        <div className="relative pl-6 md:pl-8 lg:pl-12 border-l">
           {experiences.map((exp, index) => (
-            <div key={exp.id} className="mb-12 last:mb-0 timeline-item">
-              <div className="absolute left-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-background border-2 border-primary -translate-x-1/2 flex items-center justify-center timeline-dot">
+            <div key={exp.id} className="mb-8 md:mb-12 last:mb-0 timeline-item">
+              <div className="absolute left-0 w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 rounded-full bg-background border-2 border-primary -translate-x-1/2 flex items-center justify-center timeline-dot">
                 {exp.type === "education" ? (
-                  <GraduationCap className="h-4 w-4 md:h-5 md:w-5 text-primary" />
+                  <GraduationCap className="h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5 text-primary" />
                 ) : (
-                  <Briefcase className="h-4 w-4 md:h-5 md:w-5 text-primary" />
+                  <Briefcase className="h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5 text-primary" />
                 )}
               </div>
 
               <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 timeline-content">
-                <CardContent className="p-6">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                      <h3 className="text-xl font-semibold">{exp.title}</h3>
-                      <Badge
-                        variant={exp.type === "education" ? "secondary" : "outline"}
-                        className={
-                          exp.type === "education"
-                            ? "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100"
-                            : ""
-                        }
-                      >
-                        {exp.type === "education" ? "Education" : "Work Experience"}
-                      </Badge>
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex flex-col gap-3 md:gap-4">
+                    <div className="flex flex-col gap-2">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                        <h3 className="text-lg md:text-xl font-semibold leading-tight">
+                          {exp.title}
+                        </h3>
+                        <Badge
+                          variant={exp.type === "education" ? "secondary" : "outline"}
+                          className={
+                            exp.type === "education"
+                              ? "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100 text-xs md:text-sm shrink-0"
+                              : "bg-blue-100  dark:bg-blue-900 text-xs md:text-sm shrink-0"
+                          }
+                        >
+                          {exp.type === "education" ? "Education" : "Work"}
+                        </Badge>
+                      </div>
                     </div>
 
                     <div className="space-y-2">
-                      <div className="text-lg font-medium">{exp.organization}</div>
-                      <div className="text-muted-foreground">{exp.department}</div>
+                      <div className="text-base md:text-lg font-medium leading-tight">
+                        {exp.organization}
+                      </div>
+                      {exp.department && (
+                        <div className="text-sm md:text-base text-muted-foreground">
+                          {exp.department}
+                        </div>
+                      )}
 
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-sm text-muted-foreground">
+                      <div className="flex flex-col gap-2 text-xs md:text-sm text-muted-foreground">
                         <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
-                          <span>
+                          <Calendar className="h-3 w-3 md:h-4 md:w-4 shrink-0" />
+                          <span className="leading-tight">
                             {exp.startDate}
                             {exp.endDate ? ` - ${exp.endDate}` : ""}
                           </span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
-                          <span>{exp.location}</span>
+                          <MapPin className="h-3 w-3 md:h-4 md:w-4 shrink-0" />
+                          <span className="leading-tight">{exp.location}</span>
                         </div>
                       </div>
                     </div>
 
-                    <p>{exp.description}</p>
+                    {exp.description && (
+                      <p className="text-sm md:text-base leading-relaxed">
+                        {exp.description}
+                      </p>
+                    )}
 
                     {exp.achievements.length > 0 && (
                       <div className="space-y-2">
-                        <h4 className="font-medium">Key Achievements:</h4>
-                        <ul className="list-disc pl-5 space-y-1">
+                        <h4 className="font-medium text-sm md:text-base">Key Achievements:</h4>
+                        <ul className="list-disc pl-4 md:pl-5 space-y-1">
                           {exp.achievements.map((achievement, i) => (
-                            <li key={i} className="transition-all duration-300">
+                            <li key={i} className="transition-all duration-300 text-sm md:text-base leading-relaxed">
                               {achievement}
                             </li>
                           ))}
