@@ -1,0 +1,504 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 30% 96%; /* More brown/pinkish/creamy white */
+    --foreground: 240 10% 3.9%;
+    --card: 30 30% 98%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 30 30% 98%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 10%; /* Softer dark background */
+    --foreground: 0 0% 98%;
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 262.1 83.3% 57.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight font-bold;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+  h6 {
+    @apply text-base md:text-lg;
+  }
+}
+
+/* Figure and caption styling */
+.prose figure {
+  @apply my-8;
+}
+
+.prose figure img {
+  @apply mx-auto rounded-lg shadow-md;
+}
+
+.prose figcaption,
+.prose .figure-caption,
+.prose p.caption,
+.prose .image-caption {
+  @apply text-center text-sm text-muted-foreground mt-2 italic;
+}
+
+/* Add specific class for centered text that will work in markdown */
+.text-center {
+  text-align: center !important;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-purple-600/10 to-blue-500/10;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.9375rem;
+  top: 2.5rem;
+  bottom: -1.5rem;
+  width: 1px;
+  background-color: hsl(var(--border));
+}
+
+@media (min-width: 768px) {
+  .timeline-item:not(:last-child)::after {
+    left: 1.4375rem;
+  }
+}
+
+/* Publication card hover effect */
+.publication-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience timeline animations */
+.timeline-dot {
+  position: relative;
+}
+
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  background-color: hsl(var(--primary) / 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot::before {
+  opacity: 1;
+}
+
+.timeline-content {
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(4px);
+}
+
+/* Card hover effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog card specific styling */
+.blog-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+}
+
+.blog-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Animated underline for links */
+.animated-underline {
+  position: relative;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: hsl(var(--primary));
+  transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* Dynamic underline for navigation */
+.dynamic-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.dynamic-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  @apply bg-foreground;
+  transition: width 0.3s ease;
+}
+
+.dynamic-underline:hover::after,
+.dynamic-underline.active::after {
+  width: 100%;
+}
+
+/* Subtle page transitions */
+.page-transition {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section styling */
+.section-heading {
+  @apply relative pb-2 mb-6;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary) / 0.5));
+  border-radius: 3px;
+}
+
+/* Centered page heading */
+.page-heading {
+  @apply text-center relative pb-4 mb-6;
+}
+
+.page-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary) / 0.5));
+  border-radius: 3px;
+}
+
+/* Green page heading */
+.page-heading-green {
+  @apply text-center relative pb-4 mb-6;
+}
+
+.page-heading-green::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #16a34a, #22c55e);
+  border-radius: 3px;
+}
+
+/* Blue page heading */
+.page-heading-blue {
+  @apply text-center relative pb-4 mb-6;
+}
+
+.page-heading-blue::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  border-radius: 3px;
+}
+
+/* Improved prose styling */
+.prose {
+  @apply max-w-none;
+}
+
+.prose h2 {
+  @apply mt-10 mb-4;
+}
+
+.prose h3 {
+  @apply mt-8 mb-3;
+}
+
+.prose p {
+  @apply mb-6 leading-relaxed;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary pl-4 italic my-6;
+}
+
+.prose code {
+  @apply bg-muted px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-muted p-4 rounded-lg overflow-x-auto my-6;
+}
+
+/* Improved card styling */
+.content-card {
+  @apply bg-card rounded-lg border shadow-sm overflow-hidden transition-all duration-300;
+}
+
+.content-card:hover {
+  @apply shadow-md;
+}
+
+/* Improved button styling */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background;
+}
+
+.btn-outline {
+  @apply border border-input hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background;
+}
+
+/* Improved form styling */
+.form-input {
+  @apply flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+/* Improved badge styling */
+.badge {
+  @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+}
+
+/* Improved navigation styling */
+.nav-link {
+  @apply relative px-3 py-2 text-sm font-medium transition-all duration-200;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  @apply bg-foreground;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.nav-link.active::after {
+  width: 80%;
+}
+
+/* Improved table of contents styling */
+.toc-link {
+  @apply block py-1 transition-all duration-200 hover:pl-1;
+}
+
+.toc-link.active {
+  @apply font-semibold border-l-2 border-primary pl-2;
+}
+
+/* Add a new class for button-like links */
+.button-link {
+  @apply px-3 py-1.5 rounded-md transition-all duration-200 inline-flex items-center;
+  width: fit-content; /* Make the hover area only as wide as the content */
+}
+
+.button-link-blue:hover {
+  @apply bg-blue-100 dark:bg-blue-900/30;
+}
+
+.button-link-green:hover {
+  @apply bg-green-100 dark:bg-green-900/30;
+}
+
+.button-link-purple:hover {
+  @apply bg-purple-100 dark:bg-purple-900/30;
+}
+
+/* Add these styles to the end of your globals.css file */
+
+/* Image zoom styles */
+.prose img {
+  @apply rounded-lg my-8 shadow-md mx-auto cursor-zoom-in transition-transform duration-200;
+  width: 100%; /* Full width of the container */
+  max-width: 800px; /* Maximum width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures proper centering */
+}
+
+.prose img:hover {
+  transform: scale(1.02);
+}
+
+/* Ensure images in figures follow the same width rule */
+.prose figure img {
+  @apply mx-auto rounded-lg shadow-md cursor-zoom-in;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+}
+
+/* Animation for the zoomed image */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.zoom-overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.zoom-image {
+  animation: zoomIn 0.2s ease-out;
+}
+
+/* Ensure images in figures are also zoomable */
+.prose figure img {
+  cursor: zoom-in;
+}
+
+/* Improve accessibility focus styles */
+.prose img:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
