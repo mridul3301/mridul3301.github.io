@@ -16,7 +16,7 @@ This paper introduced the concept of Transformer model architecture, which has b
 
 
 
-![transformer_architecture](https://raw.githubusercontent.com/mridul3301/blog/main/public/posts/attention_images/real-arechitecture.png)
+![transformer_architecture](https://raw.githubusercontent.com/maxdecplanck/blog-images/refs/heads/main/attention_images/real-arechitecture.png)
 
 <div style="text-align: center;">
   <i><b>Fig: Transformer Architecture</b></i>
@@ -34,7 +34,7 @@ At first, each input word is represented/encoded into some vectors. All the enco
 
 
 
-[![word_representation](https://raw.githubusercontent.com/mridul3301/blog/main/public/posts/attention_images/word_representation.png)](javascript:void(0);)
+[![word_representation](https://raw.githubusercontent.com/maxdecplanck/blog-images/refs/heads/main/attention_images/word_representation.png)](javascript:void(0);)
 
 <div style="text-align: center;">
   <i><b>Fig: Word Representation</b></i>
@@ -54,7 +54,7 @@ Now, we pass our word representations to the word embeddings in a feed forward l
 
 
 
-[![word_embedding](https://raw.githubusercontent.com/mridul3301/blog/main/public/posts/attention_images/word_embedding.png)](javascript:void(0);)
+[![word_embedding](https://raw.githubusercontent.com/maxdecplanck/blog-images/refs/heads/main/attention_images/word_embedding.png)](javascript:void(0);)
 <div style="text-align: center;">
   <i><b>Fig: Input Embedding</b></i>
 </div>
