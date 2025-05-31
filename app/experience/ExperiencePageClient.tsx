@@ -36,7 +36,7 @@ const experiences = [
   },
   {
     id: 3,
-    title: "Research Assistant",
+    title: "Research Collaborator",
     organization: "Kathmandu University",
     department: "Information and Language Processing Research Lab (ILPRL)",
     location: "Kavre, Nepal",

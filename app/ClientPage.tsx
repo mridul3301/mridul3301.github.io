@@ -9,7 +9,7 @@ import { publications } from "@/lib/publications"
 
 
 export default function Home() {
-  const featuredPublicationIds = [1, 2, 4]
+  const featuredPublicationIds = [1, 2, 3]
   return (
     <div className="flex flex-col gap-16 pt-12 pb-16 page-transition ">
     

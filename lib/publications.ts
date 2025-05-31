@@ -14,8 +14,22 @@ export interface Publication {
 
 // Sample publication data
 export const publications: Publication[] = [
-  {
+    {
     id: 1,
+    title: "Confirmation bias: A challenge for scalable oversight",
+    authors: "Recchia G, Mangat CS, Nyachhyon J, Sharma M, Canavan C, Epstein-Gross D, Abdulbari M",
+    journal: "Arxiv Pre-print",
+    year: 2025,
+    type: "preprint",
+    tags: ["Scalable Oversight", "NLP", "Language Models", "evaluations"],
+    abstract: 
+      "We conducted two studies examining the performance of simple oversight protocols where evaluators know that the model is correct most of the time, but not all of the time.",
+    doi: "#",
+    pdf: "https://moduloresearch.com/papers/Confirmation_bias_A_challenge_for_scalable_oversight.pdf",
+  },
+  {
+    
+    id: 2,
     title: "Development of Pre-Trained Transformer-based Models for the Nepali Language",
     authors: "Thapa P, Nyachhyon J, Sharma M, Bal BK",
     journal: "(CHiPSAL) COLING",
@@ -28,7 +42,7 @@ export const publications: Publication[] = [
     pdf: "https://aclanthology.org/2025.chipsal-1.2.pdf",
   },
   {
-    id: 2,
+    id: 3,
     title: "Consolidating and Developing Benchmarking Datasets for the Nepali Natural Language Understanding Tasks",
     authors: "Nyachhyon J, Sharma M, Thapa P, Bal BK",
     journal: "Arxiv Pre-print",
@@ -41,7 +55,7 @@ export const publications: Publication[] = [
     pdf: "https://arxiv.org/pdf/2411.19244",
   },
   {
-    id: 3,
+    id: 4,
     title: "Local Herb Identification Using Transfer Learning: A CNN-Powered Mobile Application for Nepalese Flora",
     authors: "Thapa P, Sharma M, Nyachhyon J, Pandeya YR",
     journal: "Arxiv Pre-print",
@@ -52,18 +66,5 @@ export const publications: Publication[] = [
       "Collected image datasets for local herbs and trained vision models for classification.",
     doi: "10.48550/arXiv.2505.02147",
     pdf: "https://arxiv.org/pdf/2505.02147",
-  },
-  {
-    id: 4,
-    title: "Confirmation bias: A challenge for scalable oversight",
-    authors: "Recchia G, Mangat CS, Nyachhyon J, Sharma M, Canavan C, Epstein-Gross D, Abdulbari M",
-    journal: "Arxiv Pre-print",
-    year: 2025,
-    type: "preprint",
-    tags: ["Scalable Oversight", "NLP", "Language Models", "evaluations"],
-    abstract: 
-      "We conducted two studies examining the performance of simple oversight protocols where evaluators know that the model is correct most of the time, but not all of the time.",
-    doi: "10.1186/s13059-020-1234-5",
-    pdf: "#",
   },
 ]
