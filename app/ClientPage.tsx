@@ -90,8 +90,8 @@ export default function Home() {
                 <Image
                   src="/images/mridul.png"
                   alt="Mridul Sharma"
-                  width={400}
-                  height={400}
+                  width={320}
+                  height={320}
                   className="object-cover"
                   priority
                 />
