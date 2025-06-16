@@ -160,7 +160,7 @@ export default function Home() {
                   key={pub.id}
                   className="overflow-hidden h-full hover-card border-t-4 border-muted hover:cursor-pointer"
                   onClick={() =>
-                    window.open(`https://doi.org/${pub.doi}`, "_blank", "noopener,noreferrer")
+                    window.open(`${pub.pdf}`, "_blank", "noopener,noreferrer")
                   }
                 >
                   <CardContent className="p-6 space-y-4">

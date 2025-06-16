@@ -27,7 +27,7 @@ export default function PublicationCard({ publication: pub, onTagClick }: Public
 
   // Function to handle the main card click
   const handleCardClick = () => {
-    window.open(`https://doi.org/${pub.doi}`, "_blank", "noopener,noreferrer")
+    window.open(`${pub.pdf}`, "_blank", "noopener,noreferrer")
   }
 
   // Get the appropriate icon based on publication type
