@@ -43,7 +43,7 @@ export const publications: Publication[] = [
   },
   {
     id: 3,
-    title: "Consolidating and Developing Benchmarking Datasets for the Nepali Natural Language Understanding Tasks",
+    title: "Evaluating Transformer-based Encoders for the Nepali Natural Language Understanding Tasks",
     authors: "Nyachhyon J, Sharma M, Thapa P, Bal BK",
     journal: "Arxiv Pre-print",
     year: 2025,
