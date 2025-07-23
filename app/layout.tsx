@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "AI Researcher exploring LLM, RL & Parallel Computing",
   keywords: ["NLP", "Nepali Language", "machine learning", "AI", "research", "Nepal"],
-  authors: [{ name: "Mridul Sharma", url: "https://mridulsharma.com.np" }],
+  authors: [{ name: "Mridul Sharma", url: "https://mridul3301.github.io/" }],
   creator: "Mridul Sharma",
   publisher: "Mridul Sharma",
   openGraph: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Mridul Sharma",
     title: "Mridul Sharma | AI Researcher",
     description:
-      "AI Researcher exploring the intersection of machine learning and genomics at Stanford University.",
+      "AI Researcher exploring LLM, RL & Parallel Computing.",
     images: [
       {
         url: "/og-image.jpg",
