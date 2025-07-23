@@ -64,6 +64,20 @@ const experiences = [
   },
   {
     id: 5,
+    title: "ML Engineer",
+    organization: "icebrkrai",
+    department: "",
+    location: "Kathmandu, Nepal",
+    startDate: "March 2024",
+    endDate: "September 2024",
+    type: "work",
+    description:
+      "",
+    achievements: [
+    ],
+  },
+  {
+    id: 6,
     title: "Research Assistant",
     organization: "AI Research Center, Advanced College of Engineering & Management",
     department: "Department of Computer Engineering",
@@ -77,7 +91,7 @@ const experiences = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "AI Fellow",
     organization: "Fusemachines Inc",
     department: "",
@@ -91,7 +105,7 @@ const experiences = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Undergraduate Student",
     organization: "Advanced College of Engineering & Management",
     department: "Department of Computer Engineering",
@@ -105,7 +119,7 @@ const experiences = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Software Engineering Intern",
     organization: "Soft 9",
     department: "Software Development",
