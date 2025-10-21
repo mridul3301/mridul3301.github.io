@@ -114,9 +114,9 @@ export default function PublicationsPage() {
                     <span className="hidden sm:inline">Preprint</span>
                     <span className="sm:hidden">P</span> ({preprintCount})
                   </TabsTrigger>
-                  <TabsTrigger value="preprint" className="flex items-center gap-1 text-xs md:text-sm px-2 md:px-3">
+                  <TabsTrigger value="Technical Report" className="flex items-center gap-1 text-xs md:text-sm px-2 md:px-3">
                     <FileCode className="h-3 w-3 md:h-4 md:w-4" /> 
-                    <span className="hidden sm:inline">Preprint</span>
+                    <span className="hidden sm:inline">Technical Report</span>
                     <span className="sm:hidden">T</span> ({reportCount})
                   </TabsTrigger>
                 </TabsList>
