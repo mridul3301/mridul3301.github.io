@@ -41,6 +41,8 @@ export default function PublicationCard({ publication: pub, onTagClick }: Public
         return <FileCode className="h-4 w-4 text-amber-500" />
       case "conference":
         return <PresentationIcon className="h-4 w-4 text-blue-500" />
+      case "Technical Report":
+        return <FileCode className="h-4 w-4 text-pink-500" />
       default:
         return <FileText className="h-4 w-4 text-gray-500" />
     }
@@ -57,6 +59,8 @@ export default function PublicationCard({ publication: pub, onTagClick }: Public
         return "hsl(142, 76%, 36%)"
       case "preprint":
         return "hsl(45, 100%, 51%)"
+      case "Technical Report":
+        return "hsl(var(--primary))"
       default:
         return "hsl(var(--border))"
     }

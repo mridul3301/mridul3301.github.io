@@ -6,13 +6,13 @@ import { Calendar, MapPin, Briefcase, GraduationCap } from "lucide-react"
 
 // Sample experience data
 const experiences = [
-  {
+    {
     id: 1,
-    title: "Machine Learning Engineer",
-    organization: "Keeper Dating Inc",
+    title: "AI Engineer",
+    organization: "Lamida Inc",
     department: "",
-    location: "Dover, USA",
-    startDate: "Feb 2025",
+    location: "Remote",
+    startDate: "Aug 2025",
     endDate: "Present",
     type: "work",
     description:
@@ -21,7 +21,21 @@ const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 3,
+    title: "Machine Learning Engineer",
+    organization: "Keeper Dating Inc",
+    department: "",
+    location: "Remote",
+    startDate: "Feb 2025",
+    endDate: "June 2025",
+    type: "work",
+    description:
+      "",
+    achievements: [
+    ],
+  },
+  {
+    id: 4,
     title: "Co-Founder",
     organization: "Institute for Research and Innovation in Intelligent Systems (IRIIS)",
     department: "",
@@ -35,7 +49,7 @@ const experiences = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: "Research Collaborator",
     organization: "Kathmandu University",
     department: "Information and Language Processing Research Lab (ILPRL)",
@@ -49,7 +63,7 @@ const experiences = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: "Research Intern",
     organization: "Modulo Research",
     department: "",
@@ -63,7 +77,7 @@ const experiences = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     title: "ML Engineer",
     organization: "icebrkrai",
     department: "",
@@ -77,7 +91,7 @@ const experiences = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     title: "Research Assistant",
     organization: "AI Research Center, Advanced College of Engineering & Management",
     department: "Department of Computer Engineering",
@@ -91,7 +105,7 @@ const experiences = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     title: "AI Fellow",
     organization: "Fusemachines Inc",
     department: "",
@@ -105,7 +119,7 @@ const experiences = [
     ],
   },
   {
-    id: 8,
+    id: 10,
     title: "Undergraduate Student",
     organization: "Advanced College of Engineering & Management",
     department: "Department of Computer Engineering",
@@ -119,7 +133,7 @@ const experiences = [
     ],
   },
   {
-    id: 9,
+    id: 11,
     title: "Software Engineering Intern",
     organization: "Soft 9",
     department: "Software Development",

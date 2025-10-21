@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Github, Mail, Twitter, FileText, ArrowRight, ExternalLink, Calendar, User } from "lucide-react"
+import { FaGithub, FaEnvelope, FaXTwitter } from "react-icons/fa6"
+import { SiGooglescholar, SiSemanticscholar } from "react-icons/si"
 import { Card, CardContent } from "@/components/ui/card"
 import { publications } from "@/lib/publications"
 
@@ -26,38 +28,37 @@ export default function Home() {
           >
             <div className="space-y-4">
               <div className="inline-block px-3 py-1 rounded-full bg-muted text-sm font-medium mb-2">
-                ML Engineer @ Keeper Dating Inc.
+                AI Engineer @ Lamida Inc.
               </div>
               <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight">
                 <span className="text-4xl">👋</span> Hey, I'm Mridul Sharma
               </h1>
               <h2 className="text-xl md:text-2xl font-medium text-muted-foreground max-w-2xl">
-              Exploring large language models to enhance generalization and understand them.
+              Exploring Multimodal language modeling, RL & Bayesian Inference.
               </h2>
             </div>
 
             <div className="space-y-6 text-muted-foreground max-w-2xl">
-              <p className="text-lg">
-                I am Machine Learning Engineer at Keeper Dating Inc. where I currently work on developing retrieval + ranking 
-                algorithms for matchmaking and also on large language model distillation.
+              <p className="text-xl">
+                I am AI  Engineer at Lamida Inc. where I currently work on LLMs related to Mental Health.
               </p>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-medium">My interests include:</h3>
                 <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-2">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
-                    <span>Large Language Models (LLMs)</span>
+                    <span>Language Modeling (LLMs)</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
                     <span>Reinforcement Learning</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Parallel Processing</span>
+                  <li className="flex items-start gap-2 text-xl">
+                    <span className="text-primary mt-1 ">•</span>
+                    <span>Multimodal/Multisensory Intelligence</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
                     <span>AI for Social Good</span>
                   </li>
@@ -66,74 +67,61 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button asChild className="rounded-full px-6 bg-blue-600 hover:bg-blue-700 text-white">
+              <Button asChild variant="outline" className="rounded-full px-6 bg-blue-600 hover:bg-blue-900 text-white hover:text-white">
                 <Link href="/publications">
-                  <FileText className="mr-2 h-4 w-4" /> View Publications
+                  <FileText className="mr-2 h-5 w-5" /> View Publications
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="rounded-full px-6">
+              <Button asChild variant="outline" className="rounded-full px-6 bg-blue-600 hover:bg-blue-900 text-white hover:text-white">
                 <Link href="/blog">
-                  <ExternalLink className="mr-2 h-4 w-4" /> Read My Blog
+                  <ExternalLink className="mr-2 h-5 w-5" /> Read My Blog
                 </Link>
               </Button>
             </div>
           </div>
 
-          <div
-            className="w-full md:w-auto flex flex-col items-center"
-            // initial={{ opacity: 0, scale: 0.9 }}
-            // animate={{ opacity: 1, scale: 1 }}
-            // transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="relative w-full max-w-xs md:max-w-sm">
-              <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-xl">
-                <Image
-                  src="/images/mridul.png"
-                  alt="Mridul Sharma"
-                  width={320}
-                  height={320}
-                  className="object-cover"
-                  priority
-                />
-              </div>
-
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+          <div className="w-full md:w-auto flex flex-col items-center">
+          {/* Profile Image */}
+          <div className="relative w-auto max-w-xs md:max-w-sm">
+            <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-xl">
+              <Image
+                src="/images/mridul.png"
+                alt="Mridul Sharma"
+                width={240}
+                height={240}
+                className="object-cover"
+                priority
+              />
             </div>
-
-            {/* Social Media Icons */}
-            <div className="flex gap-8 mt-8 justify-center">
-              <Link href="mailto:mridulsharma3301@gmail.com" className="transition-transform hover:scale-110 backdrop-blur-3xl bg-primary/10">
-                  <Mail className="h-6 w-6" />
-                  <span className="sr-only">Email</span>
-                </Link>
-              <Link href="https://x.com/mriiidullll" target="_blank" className="transition-transform hover:scale-110 backdrop-blur-3xl bg-primary/10">
-                <Twitter className="h-6 w-6" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="https://github.com/mridul3301" target="_blank" className="transition-transform hover:scale-110 backdrop-blur-3xl bg-primary/10">
-                <Github className="h-6 w-6" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-              <Link href="https://scholar.google.com/citations?user=TSC8VqkAAAAJ&hl=en" target="_blank" className="transition-transform hover:scale-110 backdrop-blur-3xl bg-primary/10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-6 w-6"
-                >
-                  <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269z" />
-                  <path d="M12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
-                </svg>
-                <span className="sr-only">Google Scholar</span>
-              </Link>
-            </div>
+            {/* Decorative Blur Elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
           </div>
+
+          {/* Social Icons */}
+          <div className="flex gap-12 mt-12 justify-center">
+            {[
+              { href: "mailto:mridulsharma3301@gmail.com", Icon: FaEnvelope, label: "Email" },
+              { href: "https://x.com/mriiidullll", Icon: FaXTwitter, label: "X/Twitter" },
+              { href: "https://github.com/mridul3301", Icon: FaGithub, label: "GitHub" },
+              { href: "https://scholar.google.com/citations?user=TSC8VqkAAAAJ&hl=en", Icon: SiGooglescholar, label: "Google Scholar" },
+              { href: "https://www.semanticscholar.org/author/Mridul-Sharma/2332894534", Icon: SiSemanticscholar, label: "Semantic Scholar", scale: 1.15 },
+            ].map(({ href, Icon, label, scale = 1.2 }, idx) => (
+              <Link
+                key={idx}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center rounded-full p-3 bg-primary/20 hover:bg-primary/30 transition-transform hover:scale-130"
+              >
+                <div className="h-7 w-7 flex items-center justify-center" style={{ transform: `scale(${scale})` }}>
+                  <Icon className="h-full w-full" />
+                </div>
+                <span className="sr-only">{label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
         </div>
       </section>
 

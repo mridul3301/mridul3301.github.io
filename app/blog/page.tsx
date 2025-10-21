@@ -8,18 +8,18 @@ import { getAllBlogPosts } from "@/lib/mdx"
 export const metadata: Metadata = {
   title: "Research Blog",
   description:
-    "Thoughts, insights, and updates on research in computational biology, genomics, and bioinformatics by Mridul Sharma.",
+    "Thoughts, insights, and updates on research in LLMs, RL, Bayesian Inference and Parallel Computing by Mridul Sharma.",
   openGraph: {
     title: "Research Blog | Mridul Sharma",
     description:
-      "Thoughts, insights, and updates on research in computational biology, genomics, and bioinformatics by Mridul Sharma.",
+      "Thoughts, insights, and updates on research in LLMs, RL, Bayesian Inference and Parallel Computing by Mridul Sharma.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Research Blog | Mridul Sharma",
     description:
-      "Thoughts, insights, and updates on research in computational biology, genomics, and bioinformatics by Dr. Jane Smith.",
+      "Thoughts, insights, and updates on research in LLMs, RL, Bayesian Inference and Parallel Computing by Dr. Jane Smith.",
   },
 }
 
@@ -33,7 +33,7 @@ export default async function BlogPage() {
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight pt-20 page-heading-blue">Research Blog</h1>
           <p className="text-xl text-muted-foreground text-center">
-            Thoughts, insights, and updates on my research in computational biology and genomics
+            Thoughts, insights, and updates on my research in LLMs, RL, Bayesian Inference and Parallel Computing
           </p>
         </div>
 

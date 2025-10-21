@@ -4,7 +4,7 @@ date: "July 07, 2023"
 author: "Mridul Sharma"
 excerpt: "Exploring how artificial intelligence is transforming our understanding of the genome and enabling personalized medicine."
 image: "https://raw.githubusercontent.com/maxdecplanck/blog-images/refs/heads/main/attention_images/tnattention.png"
-tags: ["AI", "Genomics", "Medicine"]
+tags: ["AI", "Attention Mechanism", "Transformers", "NLP", "Language Modeling"]
 ---
 
 

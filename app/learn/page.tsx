@@ -7,16 +7,16 @@ import { getAllTopics } from "@/lib/mdx"
 
 export const metadata: Metadata = {
   title: "Learn",
-  description: "Educational materials on computational biology, genomics, and bioinformatics by Mridul Sharma.",
+  description: "Educational materials on Probability, Reinforcement Learning & Algebra.",
   openGraph: {
     title: "Learning Resources | Mridul Sharma",
-    description: "Educational materials on computational biology, genomics, and bioinformatics by Mridul Sharma.",
+    description: "Educational materials on Probability, Reinforcement Learning & Algebra.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Learning Resources | Mridul Sharma",
-    description: "Educational materials on computational biology, genomics, and bioinformatics by Mridul Sharma.",
+    description: "Educational materials on Probability, Reinforcement Learning & Algebra.",
   },
 }
 
@@ -43,7 +43,7 @@ export default async function LearnPage() {
 //         <div className="space-y-4">
 //           <h1 className="text-4xl font-bold tracking-tight pt-20 page-heading-green">Learning Resources</h1>
 //           <p className="text-xl text-muted-foreground text-center">
-//             Educational materials on computational biology, genomics, and bioinformatics
+//             Educational materials on Probability, Reinforcement Learning & Algebra
 //           </p>
 //         </div>
 

@@ -4,18 +4,18 @@ import ExperiencePageClient from "./ExperiencePageClient"
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Academic and professional experience of Mridul Sharma in computational biology, genomics, and machine learning research.",
+    "Academic and professional experience of Mridul Sharma in LLMs, RL, Bayesian Inference and Parallel Computing.",
   openGraph: {
     title: "Experience | Mridul Sharma",
     description:
-      "Academic and professional experience of Mridul Sharma in computational biology, genomics, and machine learning research.",
+      "Academic and professional experience of Mridul Sharma in LLMs, RL, Bayesian Inference and Parallel Computing.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Experience | Mridul Sharma",
     description:
-      "Academic and professional experience of Mridul Sharma in computational biology, genomics, and machine learning research.",
+      "Academic and professional experience of Mridul Sharma in LLMs, RL, Bayesian Inference and Parallel Computing.",
   },
 }
 

@@ -35,6 +35,8 @@ export default function PublicationsPage() {
   const reviewCount = publications.filter((pub) => pub.type === "review").length
   const preprintCount = publications.filter((pub) => pub.type === "preprint").length
   const conferenceCount = publications.filter((pub) => pub.type === "conference").length
+  const reportCount = publications.filter((pub) => pub.type === "Technical Report").length
+
 
   return (
     <>
@@ -111,6 +113,11 @@ export default function PublicationsPage() {
                     <FileCode className="h-3 w-3 md:h-4 md:w-4" /> 
                     <span className="hidden sm:inline">Preprint</span>
                     <span className="sm:hidden">P</span> ({preprintCount})
+                  </TabsTrigger>
+                  <TabsTrigger value="preprint" className="flex items-center gap-1 text-xs md:text-sm px-2 md:px-3">
+                    <FileCode className="h-3 w-3 md:h-4 md:w-4" /> 
+                    <span className="hidden sm:inline">Preprint</span>
+                    <span className="sm:hidden">T</span> ({reportCount})
                   </TabsTrigger>
                 </TabsList>
               </Tabs>
