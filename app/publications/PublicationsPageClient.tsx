@@ -32,7 +32,7 @@ export default function PublicationsPage() {
 
   // Count publications by type
   const journalCount = publications.filter((pub) => pub.type === "journal").length
-  const reviewCount = publications.filter((pub) => pub.type === "review").length
+  const workshopCount = publications.filter((pub) => pub.type === "Conference Workshop").length
   const preprintCount = publications.filter((pub) => pub.type === "preprint").length
   const conferenceCount = publications.filter((pub) => pub.type === "conference").length
   const reportCount = publications.filter((pub) => pub.type === "Technical Report").length
@@ -104,10 +104,10 @@ export default function PublicationsPage() {
                     <span className="hidden sm:inline">Conference</span>
                     <span className="sm:hidden">C</span> ({conferenceCount})
                   </TabsTrigger>
-                  <TabsTrigger value="review" className="flex items-center gap-1 text-xs md:text-sm px-2 md:px-3">
+                  <TabsTrigger value="Conference Workshop" className="flex items-center gap-1 text-xs md:text-sm px-2 md:px-3">
                     <BookOpen className="h-3 w-3 md:h-4 md:w-4" /> 
-                    <span className="hidden sm:inline">Review</span>
-                    <span className="sm:hidden">R</span> ({reviewCount})
+                    <span className="hidden sm:inline">Workshop</span>
+                    <span className="sm:hidden">R</span> ({workshopCount})
                   </TabsTrigger>
                   <TabsTrigger value="preprint" className="flex items-center gap-1 text-xs md:text-sm px-2 md:px-3">
                     <FileCode className="h-3 w-3 md:h-4 md:w-4" /> 

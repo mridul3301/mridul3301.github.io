@@ -35,12 +35,12 @@ export default function PublicationCard({ publication: pub, onTagClick }: Public
     switch (pub.type) {
       case "journal":
         return <Award className="h-4 w-4 text-blue-500" />
-      case "review":
-        return <BookOpen className="h-4 w-4 text-green-500" />
+      case "Conference Workshop":
+        return <BookOpen className="h-4 w-4 text-blue-500" />
       case "preprint":
         return <FileCode className="h-4 w-4 text-amber-500" />
       case "conference":
-        return <PresentationIcon className="h-4 w-4 text-blue-500" />
+        return <PresentationIcon className="h-4 w-4 text-green-500" />
       case "Technical Report":
         return <FileCode className="h-4 w-4 text-pink-500" />
       default:
@@ -54,13 +54,13 @@ export default function PublicationCard({ publication: pub, onTagClick }: Public
       case "journal":
         return "hsl(var(--primary))"
       case "conference":
-        return "#2563eb" // Blue
-      case "review":
         return "hsl(142, 76%, 36%)"
+      case "Conference Workshop":
+        return "#2563eb"
       case "preprint":
         return "hsl(45, 100%, 51%)"
       case "Technical Report":
-        return "hsl(var(--primary))"
+        return "hsl(360, 100%, 60%)"
       default:
         return "hsl(var(--border))"
     }

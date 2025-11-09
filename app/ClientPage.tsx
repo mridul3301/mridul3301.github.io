@@ -40,11 +40,11 @@ export default function Home() {
 
             <div className="space-y-6 text-muted-foreground max-w-2xl">
               <p className="text-xl">
-                I am AI  Engineer at Lamida Inc. where I currently work on LLMs related to Mental Health.
+                I am AI Engineer at Lamida Inc. where I currently work on LLMs with focus for Mental Health.
               </p>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-medium">My interests include:</h3>
+                <h3 className="text-xl font-medium">My interests lies somewhere in the intersection of:</h3>
                 <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-2">
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
@@ -52,15 +52,15 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
-                    <span>Reinforcement Learning</span>
+                    <span>RL/Planning</span>
                   </li>
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1 ">•</span>
-                    <span>Multimodal/Multisensory Intelligence</span>
+                    <span>Bayesian Inference</span>
                   </li>
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
-                    <span>AI for Social Good</span>
+                    <span>Multimodality</span>
                   </li>
                 </ul>
               </div>
@@ -99,7 +99,8 @@ export default function Home() {
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-12 mt-12 justify-center">
+          {/* Social Icons */}
+          <div className="flex gap-6 sm:gap-8 md:gap-12 mt-8 sm:mt-10 md:mt-12 justify-center flex-wrap">
             {[
               { href: "mailto:mridulsharma3301@gmail.com", Icon: FaEnvelope, label: "Email" },
               { href: "https://x.com/mriiidullll", Icon: FaXTwitter, label: "X/Twitter" },
@@ -112,9 +113,9 @@ export default function Home() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center rounded-full p-3 bg-primary/20 hover:bg-primary/30 transition-transform hover:scale-130"
+                className="flex items-center justify-center rounded-full p-2 sm:p-3 bg-primary/20 hover:bg-primary/30 transition-transform hover:scale-110 sm:hover:scale-125"
               >
-                <div className="h-7 w-7 flex items-center justify-center" style={{ transform: `scale(${scale})` }}>
+                <div className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 flex items-center justify-center" style={{ transform: `scale(${scale})` }}>
                   <Icon className="h-full w-full" />
                 </div>
                 <span className="sr-only">{label}</span>
