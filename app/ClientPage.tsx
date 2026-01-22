@@ -60,7 +60,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
-                    <span>Multimodality</span>
+                    <span>Human-AI Interaction</span>
                   </li>
                 </ul>
               </div>
