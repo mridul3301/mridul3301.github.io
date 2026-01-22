@@ -16,7 +16,7 @@ export interface Publication {
 export const publications: Publication[] = [
   {
     id: 1,
-    title: "MultiNet v1.0: A Comprehensive Benchmark for Evaluating Multimodal Reasoning and Action Models Across Diverse Domains",
+    title: "Benchmarking the Generality of Vision-Language-Action Models",
     authors: "Guruprasad P, Chowdhury S, Sikka H, Sharma M, Lu H, Rivera S, Khurana A, Wang Y",
     journal: "Manifold Research Publications",
     year: 2025,
@@ -24,8 +24,8 @@ export const publications: Publication[] = [
     tags: ["Vision Language Action Models", "Benchmarks", "Multimodal", "evaluations"],
     abstract: 
       " Our findings reveal significant insights into the current state of multimodal AI, highlighting both promising capabilities and critical limitations that inform future research directions. We release our complete benchmark suite, evaluation framework, and detailed analysis to accelerate progress in this field.",
-    doi: "10.5281/zenodo.17404313",
-    pdf: "https://multinet.ai/static/pages/Multinetv1.html",
+    doi: "10.48550/arXiv.2512.11315",
+    pdf: "https://arxiv.org/pdf/2512.11315",
   },
     {
     id: 2,
@@ -51,7 +51,7 @@ export const publications: Publication[] = [
     abstract:
       "We introduce twelvw new datasets, creating a new benchmark, the Nepali Language Understanding Evaluation (NLUE) benchmark, for evaluating the performance of models across a diverse set of Natural Language Understanding (NLU) tasks. The added tasks include single-sentence classification, similarity and paraphrase tasks, and Natural Language Inference (NLI) tasks. On evaluating the models using added tasks, we observe that the existing models fall short in handling complex NLU tasks effectively.",
     doi: "10.48550/arXiv.2411.19244",
-    pdf: "https://arxiv.org/pdf/2411.19244",
+    pdf: "https://aclanthology.org/2025.findings-ijcnlp.119.pdf",
   },
   {
     id: 4,
@@ -76,7 +76,7 @@ export const publications: Publication[] = [
     tags: ["PIQA", "Benchmarks", "Physical Commonsense", "evaluations"],
     abstract: 
       "We present Global PIQA, a participatory commonsense reasoning benchmark for over 100 languages, constructed by hand by 335 researchers from 65 countries around the world. The 116 language varieties in Global PIQA cover five continents, 14 language families, and 23 writing systems. In the non-parallel split of Global PIQA, over 50% of examples reference local foods, customs, traditions, or other culturally-specific elements.",
-    doi: "//doi.org/10.48550/arXiv.2510.24081",
+    doi: "doi.org/10.48550/arXiv.2510.24081",
     pdf: "https://arxiv.org/pdf/2510.24081",
   },
   {
