@@ -34,7 +34,7 @@ export default function Home() {
                 <span className="text-4xl">👋</span> Hey, I'm Mridul Sharma
               </h1>
               <h2 className="text-xl md:text-2xl font-medium text-muted-foreground max-w-2xl">
-              Exploring Multimodal language modeling, RL & Bayesian Inference.
+              Exploring Multimodal language modeling, RL & VLAs.
               </h2>
             </div>
 
