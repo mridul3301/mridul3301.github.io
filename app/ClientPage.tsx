@@ -40,7 +40,7 @@ export default function Home() {
 
             <div className="space-y-6 text-muted-foreground max-w-2xl">
               <p className="text-xl">
-                I am AI Engineer at Lamida Inc. where I currently work on LLMs with focus for Mental Health.
+                I am AI Engineer at Lamida Inc. where I currently work on Multimodal AI with focus on Video Analysis.
               </p>
 
               <div className="space-y-4">
@@ -48,7 +48,7 @@ export default function Home() {
                 <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-2">
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
-                    <span>Language Modeling (LLMs)</span>
+                    <span>Multimodal Language Modeling (MLLMs)</span>
                   </li>
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
@@ -56,7 +56,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1 ">•</span>
-                    <span>Bayesian Inference</span>
+                    <span>Vision Language Action Models</span>
                   </li>
                   <li className="flex items-start gap-2 text-xl">
                     <span className="text-primary mt-1">•</span>
