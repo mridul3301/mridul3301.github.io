@@ -19,8 +19,8 @@
     "citation": "@misc{six2026learningpomdpworldmodels,\n      title={Learning POMDP World Models from Observations with Language-Model Priors}, \n      author={Valentin Six and Frederik Panse and Mathis Fajeau and Lancelot Da Costa and Mridul Sharma and Alfonso Amayuelas and Tim Z. Xiao and David Hyland and Philipp Hennig and Bernhard Schölkopf},\n      year={2026},\n      eprint={2605.13740},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2605.13740}, \n}"
   },
   {
-    "title": "Benchmarking the Generality of Vision-Language-Action Models",
-    "authors": "Pranav Guruprasad, Sudipta Chowdhury, Harsh Sikka, Mridul Sharma, Helen Lu, Sean Rivera, Aryan Khurana, Hangliang Ren, Yangyue Wang",
+    "title": "Do Multimodal Foundation Models Truly Generalize? Exposing Failure Modes Across Perception, Reasoning, and Action",
+    "authors": "Pranav Guruprasad*, Sudipta Chowdhury*, Harsh Sikka*, Mridul Sharma*, Hong Lu*, Sean Rivera*, Hangliang Ren, Aryan Khurana, Yangyue Wang",
     "venue": "MMFM @ CVPR",
     "year": 2026,
     "type": "Workshop",
@@ -29,12 +29,12 @@
     "featured": true,
     "resources": {
       "arxiv": "https://arxiv.org/pdf/2512.11315",
-      "page": "",
+      "page": "http://openaccess.thecvf.com/content/CVPR2026W/MMFM5/papers/Guruprasad_Do_Multimodal_Foundation_Models_Truly_Generalize_Exposing_Failure_Modes_Across_CVPRW_2026_paper.pdf",
       "blogs": ["https://multinet.ai/static/pages/Multinetv1.html"],
       "code": "https://github.com/ManifoldRG/MultiNet",
       "video": ""
     },
-    "citation": "@misc{guruprasad2025benchmarkinggeneralityvisionlanguageactionmodels,\n      title={Benchmarking the Generality of Vision-Language-Action Models}, \n      author={Pranav Guruprasad and Sudipta Chowdhury and Harsh Sikka and Mridul Sharma and Helen Lu and Sean Rivera and Aryan Khurana and Hangliang Ren and Yangyue Wang},\n      year={2025},\n      eprint={2512.11315},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2512.11315}, \n}"
+    "citation": "@InProceedings{Guruprasad_2026_CVPR,\n     author    = {Guruprasad, Pranav and Chowdhury, Sudipta and Sikka, Harsh and Sharma, Mridul and Lu, Hong and Rivera, Sean and Ren, Hangliang and Khurana, Aryan and Wang, Yangyue},\n     title     = {Do Multimodal Foundation Models Truly Generalize? Exposing Failure Modes Across Perception, Reasoning, and Action},\n     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},\n     month     = {June},\n     year      = {2026},\n     pages     = {7386-7396}\n }}"
   },
   {
     "title": "Confirmation bias: A challenge for scalable oversight",

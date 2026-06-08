@@ -5,11 +5,11 @@ export const profile = {
   introI:
     `I’m interested in building and understanding intelligent agents that learn and reason about the world much like humans do. My focus is on <b>world models</b>, <b>planning</b>, and <b>self-improving systems</b>; particularly how agents can form rich internal representations from limited experience and use them to plan, generalize, and act under uncertainty. I draw on techniques from <b>Reinforcement Learning</b>, <b>Bayesian inference</b>, and <b>Large Language Models</b> for research. I'm also interested in learning how these ideas scale to <b>embodied</b> and <b>multi-agent settings</b>.`,
   introII:
-    `Currently I work at <b>Lamida, Inc.</b> as AI Engineer where I focus on Video Analysis. I also collaborate with <a href="https://www.lancelotdacosta.com/home" target="_blank"><b>Lancelot Da Costa</b></a> at the <a href="https://atomresearch.github.io/" target="_blank"><b>ATOM Research Group</b></a> on developing methods to induce executable POMDP world models from raw observation-action trajectories using LLM priors. 
+    `Currently I work at <b>Lamida, Inc.</b> as AI Engineer where I focus on Video Analysis. I also collaborate with <a href="https://www.lancelotdacosta.com/home" target="_blank"><b>Lancelot Da Costa</b></a> at the <a href="https://atomresearch.github.io/" target="_blank"><b>ATOM Research Group</b></a> on developing methods to induce executable <b>POMDP world models</b> from raw observation-action trajectories using LLM priors. 
     `,
   
   introIII:
-    `Previously, I was a Research Fellow at <a href="https://www.manifoldrg.com/" target="_blank"><b>Manifold Research Group</b></a>, where I worked on evaluating the generality of Vision-Language-Action models across robotic control, multi-agent coordination, and tool use. I've also worked with <a href="https://gabrielrecchia.com/" target="_blank"><b>Gabriel Recchia</b></a> at <a href="https://moduloresearch.com/" target="_blank"><b>Modulo Research</b></a> on scalable oversight and factual consistency in long-form generation, and with <a href="https://ku.edu.np/contact-detail/bal-krishna-bal" target="_blank"> <b>Prof. Bal Krishna Bal</b></a> at <a href="http://ilprl.ku.edu.np/" target="_blank"><b>ILPRL</b></a> on Natural Language Understanding Evaluation benchmark and pre-trained transformer based models for Nepali language.
+    `Previously, I was a Research Fellow at <a href="https://www.manifoldrg.com/" target="_blank"><b>Manifold Research Group</b></a>, where I worked on evaluating the generality of <b>Vision-Language-Action</b> models across robotic control, multi-agent coordination, and tool use. I've also worked with <a href="https://gabrielrecchia.com/" target="_blank"><b>Gabriel Recchia</b></a> at <a href="https://moduloresearch.com/" target="_blank"><b>Modulo Research</b></a> on scalable oversight and <b>factual consistency in long-form generation</b>, and with <a href="https://ku.edu.np/contact-detail/bal-krishna-bal" target="_blank"> <b>Prof. Bal Krishna Bal</b></a> at <a href="http://ilprl.ku.edu.np/" target="_blank"><b>ILPRL</b></a> on <b>Natural Language Understanding Evaluation</b> benchmark and <b>pre-trained transformer</b> based models for Nepali language.
     `,
   interests: [
     "RL / Planning",
@@ -21,7 +21,7 @@ export const profile = {
     email: "mailto:mridulsharma3301@gmail.com",
     twitter: "https://x.com/mriiidullll",
     github: "https://github.com/mridul3301",
-    scholar: "https://scholar.google.com/citations?user=TSC8VqkAAAAJ&hl=en",
+    scholar: "https://scholar.google.com/citations?hl=en&user=TSC8VqkAAAAJ&view_op=list_works&sortby=pubdate",
     semantic: "https://www.semanticscholar.org/author/Mridul-Sharma/2332894534",
     cv: "/Mridul_CV.pdf",
   },
