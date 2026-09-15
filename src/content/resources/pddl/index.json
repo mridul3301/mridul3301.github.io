@@ -1,0 +1,6 @@
+{
+  "title": "Planning Domain Definition Language (PDDL)",
+  "description": "Formal, text-based language for automated planning in AI.",
+  "image": "https://raw.githubusercontent.com/maxdecplanck/resource-images/refs/heads/main/pddl/cover.png",
+  "chapters": ["intro.md"]
+}

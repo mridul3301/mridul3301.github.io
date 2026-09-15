@@ -1,0 +1,6 @@
+{
+  "title": "Reinforcement Learning",
+  "description": "Reward based learning and optimal decision making through interaction.",
+  "image": "https://raw.githubusercontent.com/maxdecplanck/resource-images/refs/heads/main/rl/new/cover.png",
+  "chapters": ["intro.md"]
+}
