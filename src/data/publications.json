@@ -7,13 +7,29 @@
     "type": "Conference",
     "abstract": "Whether navigating a building, operating a robot, or playing a game, an agent that acts effectively in an environment must first learn an internal model of how that environment works. Partially-observable Markov decision processes (POMDPs) provide a flexible modeling class for such internal world models, but learning them from observation-action trajectories alone is challenging and typically requires extensive environment interaction. We ask whether language-model priors can reduce costly interaction by leveraging prior knowledge, and introduce Pinductor (POMDP-inductor): an LLM proposes candidate POMDP models from a few observation-action trajectories and iteratively refines them to optimize a belief-based likelihood score. Despite using strictly less information, Pinductor matches the performance and sample efficiency of LLM-based POMDP learning methods that assume privileged access to the hidden state, while significantly surpassing the sample efficiency of tabular POMDP baselines. Further results show that performance scales with LLM capability and degrades gracefully as semantic information about the environment is withheld. Together, these results position language-model priors as a practical tool for sample-efficient world-model learning under partial observability, and a step toward generalist agents in real-world environments.",
     "tags": ["World Models", "POMDP", "RL"],
-    "underReview": true,
     "featured": true,
     "resources": {
       "arxiv": "https://arxiv.org/pdf/2605.13740",
       "page": "",
       "blogs": ["https://atomresearch.github.io/blog/pinductor"],
       "code": "https://github.com/atomresearch/pinductor",
+      "video": ""
+    },
+    "citation": "@misc{six2026learningpomdpworldmodels,\n      title={Learning POMDP World Models from Observations with Language-Model Priors}, \n      author={Valentin Six and Frederik Panse and Mathis Fajeau and Lancelot Da Costa and Mridul Sharma and Alfonso Amayuelas and Tim Z. Xiao and David Hyland and Philipp Hennig and Bernhard Schölkopf},\n      year={2026},\n      eprint={2605.13740},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2605.13740}, \n}"
+  },
+  {
+    "title": "No Single Tokenizer Feature Reliably Predicts Downstream Language Model Performance",
+    "authors": "Antonio Lopardo, Luis Frentzen Salim, Shikhar Srivastava, Kevin Jiang, Mridul Sharma, Catherine Arnett",
+    "venue": "EMNLP",
+    "year": 2026,
+    "type": "Conference",
+    "abstract": "Tokenization is a critical component of the language modeling pipeline, but it is poorly understood. Tokenizers can impact downstream performance, but there is currently mixed evidence about which tokenizer features predict a better language model without requiring a full training run. In this paper, we analyze approximately 200 language models trained on nine different languages. We evaluate both models and their tokenizers and test whether there is a relationship between any proposed intrinsic tokenizer evaluations and model performance, as measured by a wide variety of benchmarks. Despite the quantity and variety of proposed intrinsic tokenizer metrics, we find that none consistently predicts downstream performance across model families, tasks, and languages. This motivates the need for novel tokenizer evaluation metrics and approaches. We propose novel linguistically grounded metric introduced in this work shows that new metrics can capture aspects of tokenizer quality that existing metrics miss, though their predictive power is likely to vary across model families, languages, and tasks.",
+    "tags": ["NLP", "Tokenizers", "Tokenization"],
+    "featured": true,
+    "resources": {
+      "arxiv": "https://arxiv.org/pdf/2610.21679",
+      "page": "https://aclanthology.org/2026.findings-emnlp.96.pdf",
+      "code": "https://github.com/AntonioLopardo/tokenizer-metric-multilingual-correlations",
       "video": ""
     },
     "citation": "@misc{six2026learningpomdpworldmodels,\n      title={Learning POMDP World Models from Observations with Language-Model Priors}, \n      author={Valentin Six and Frederik Panse and Mathis Fajeau and Lancelot Da Costa and Mridul Sharma and Alfonso Amayuelas and Tim Z. Xiao and David Hyland and Philipp Hennig and Bernhard Schölkopf},\n      year={2026},\n      eprint={2605.13740},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2605.13740}, \n}"
