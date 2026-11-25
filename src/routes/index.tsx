@@ -10,12 +10,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "AI Engineer working on world models, program synthesis, RL, and vision-language-action models.",
+          "Research Collaborator at the Max Planck Institute for Intelligent Systems working on active world modeling benchmarks, POMDP world models, RL, and intelligent agents.",
       },
       { property: "og:title", content: "Mridul Sharma" },
       {
         property: "og:description",
-        content: "AI Engineer working on world models, program synthesis, RL, and VLA models.",
+        content:
+          "Research Collaborator at MPI-IS working on active world modeling benchmarks, POMDP world models, RL, and intelligent agents.",
       },
     ],
   }),
@@ -30,23 +31,29 @@ function Index() {
         {/* <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
           {profile.role}
         </p> */}
-        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground sm:text-4xl">
+        <h1 className="font-serif text-3xl leading-[1.05] tracking-tight text-foreground sm:text-3xl">
           Hey, I'm {profile.name.split(" ")[0]}.
         </h1>
         <p
-          className="mt-8 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:opacity-80 transition-opacity whitespace-pre-line"
+          className="mt-6 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
           dangerouslySetInnerHTML={{ __html: profile.introI }}
         />
+        <ul className="mt-1 list-disc space-y-0.5 pl-6 text-lg leading-relaxed text-foreground/80 marker:text-primary">
+          {profile.interestGroups.map((group) => (
+            <li key={group.title}>
+              <span className="font-semibold text-foreground">{group.title}:</span>{" "}
+              {group.topics.join(", ")}.
+            </li>
+          ))}
+        </ul>
         <p
-          className="mt-8 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:opacity-80 transition-opacity whitespace-pre-line"
+          className="mt-6 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
           dangerouslySetInnerHTML={{ __html: profile.introII }}
         />
         <p
-          className="mt-10 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:opacity-80 transition-opacity whitespace-pre-line"
+          className="mt-8 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
           dangerouslySetInnerHTML={{ __html: profile.introIII }}
         />
-
-
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link

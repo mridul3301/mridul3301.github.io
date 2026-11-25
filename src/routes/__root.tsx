@@ -76,14 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Personal site of Mridul Sharma",
+          "Research Collaborator at the Max Planck Institute for Intelligent Systems working on active world modeling benchmarks and POMDP world models.",
       },
       { name: "author", content: "Mridul Sharma" },
       { property: "og:title", content: "Mridul Sharma" },
       {
         property: "og:description",
         content:
-          "Personal site of Mridul Sharma",
+          "Research Collaborator at MPI-IS working on world models, RL, and intelligent agents.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://mridul3301.github.io/" },

@@ -1,27 +1,33 @@
 export const profile = {
   name: "Mridul Sharma",
-  role: "AI Engineer @ Lamida Inc.",
+  role: "Research Collaborator · Max Planck Institute for Intelligent Systems",
   tagline: "Exploring World Models, Program Synthesis, RL & VLA Models.",
-  introI:
-    `I’m interested in building intelligent, reliable agents that can learn, reason, and interact with the world in ways that resemble human intelligence. I like following topics: <b>RL,</b> <b>World Models,</b>  <b>Planning</b>, <b>LLMs,</b>  <b>Multi-Agent Systems</b>, and <b>AI Safety</b>. I seek to understand foundations of general intelligence, reliable decision-making, and collective intelligence in AI systems.`,
-  introII:
-    `Currently I work at <b>Lamida, Inc.</b> as AI Engineer where I focus on Video Analysis. I also collaborate with <a href="https://www.lancelotdacosta.com/home" target="_blank"><b>Lancelot Da Costa</b></a> at the <a href="https://atomresearch.github.io/" target="_blank"><b>ATOM Research Group</b></a> on developing methods to induce executable <b>POMDP world models</b> from raw observation-action trajectories using LLM priors. 
+  introI: `I’m interested in building intelligent, reliable agents that can learn, reason, and interact with the world in ways that resemble human intelligence. I seek to understand the foundations of general intelligence, decision-making, and collective intelligence in AI systems. I like following topics:`,
+  introII: `Currently, I am a Research Collaborator at the <a href="https://is.mpg.de/en" target="_blank"><b>Max Planck Institute for Intelligent Systems</b></a> in Tübingen, where I work with <a href="https://www.lancelotdacosta.com/home" target="_blank"><b>Lancelot Da Costa</b></a> on designing benchmarks for methods/models capable of open ended learning \& discovery. Recently, we introduced <a href="https://atomresearch.github.io/blog/pinductor" target="_blank"><b>Pinductor</b></a>, a method that induces executable <b>POMDP world models</b> from observation-action trajectories using language model priors, without hidden state supervision. For an easy-to-follow walkthrough, see our <a href="https://atomresearch.github.io/blog/pinductor" target="_blank"><b>blog post</b></a> and <a href="https://mtsfj.github.io/articles/pinductor.html" target="_blank"><b>interactive explainer</b></a>.
     `,
-  
-  introIII:
-    `Previously, I was a Research Fellow at <a href="https://www.manifoldrg.com/" target="_blank"><b>Manifold Research Group</b></a>, where I worked on evaluating the generality of <b>Vision-Language-Action</b> models across robotic control, multi-agent coordination, and tool use. I've also worked with <a href="https://gabrielrecchia.com/" target="_blank"><b>Gabriel Recchia</b></a> at <a href="https://moduloresearch.com/" target="_blank"><b>Modulo Research</b></a> on scalable oversight and <b>factual consistency in long-form generation</b>, and with <a href="https://ku.edu.np/contact-detail/bal-krishna-bal" target="_blank"> <b>Prof. Bal Krishna Bal</b></a> at <a href="http://ilprl.ku.edu.np/" target="_blank"><b>ILPRL</b></a> on <b>Natural Language Understanding Evaluation</b> benchmark and <b>pre-trained transformer</b> based models for Nepali language.
+
+  introIII: `Previously, I was a Research Fellow at <a href="https://www.manifoldrg.com/" target="_blank"><b>Manifold Research Group</b></a>, where I studied how well <b>Vision-Language-Action</b> and <b>generalist models</b> perform across robotic control, multi-agent coordination, and tool use. I've also worked with <a href="https://gabrielrecchia.com/" target="_blank"><b>Gabriel Recchia</b></a> at <a href="https://moduloresearch.com/" target="_blank"><b>Modulo Research</b></a> , investigating <b>confirmation bias in AI oversight</b> and <b>factual consistency in long-form generation</b>, and with <a href="https://ku.edu.np/contact-detail/bal-krishna-bal" target="_blank"> <b>Prof. Bal Krishna Bal</b></a> at <a href="http://ilprl.ku.edu.np/" target="_blank"><b>ILPRL</b></a> on Cross-lingual differences in model performance, <b>Natural Language Understanding Evaluation</b> benchmark and <b>pre-trained transformer</b> based models for Nepali language.
     `,
-  interests: [
-    "RL / Planning",
-    "Program Synthesis",
-    "Vision-Language-Action Models",
-    "Human-AI Interaction",
+  interestGroups: [
+    {
+      title: "Learning and World Models",
+      topics: ["Reinforcement Learning", "World Models", "Active Inference"],
+    },
+    {
+      title: "Reasoning and Planning",
+      topics: ["Planning", "Large Language Models"],
+    },
+    {
+      title: "Multi-Agent Intelligence",
+      topics: ["Multi-Agent Systems", "AI Safety"],
+    },
   ],
   links: {
     email: "mailto:mridulsharma3301@gmail.com",
     twitter: "https://x.com/mriiidullll",
     github: "https://github.com/mridul3301",
-    scholar: "https://scholar.google.com/citations?hl=en&user=TSC8VqkAAAAJ&view_op=list_works&sortby=pubdate",
+    scholar:
+      "https://scholar.google.com/citations?hl=en&user=TSC8VqkAAAAJ&view_op=list_works&sortby=pubdate",
     semantic: "https://www.semanticscholar.org/author/Mridul-Sharma/2332894534",
     cv: "/Mridul_CV.pdf",
   },
