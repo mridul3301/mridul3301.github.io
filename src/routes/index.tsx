@@ -35,10 +35,10 @@ function Index() {
           Hey, I'm {profile.name.split(" ")[0]}.
         </h1>
         <p
-          className="mt-6 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
+          className="mt-6 max-w-none text-justify text-[1.0625rem] leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
           dangerouslySetInnerHTML={{ __html: profile.introI }}
         />
-        <ul className="mt-1 list-disc space-y-0.5 pl-6 text-lg leading-relaxed text-foreground/80 marker:text-primary">
+        <ul className="mt-1 list-disc space-y-0.5 pl-6 text-[1.0625rem] leading-relaxed text-foreground/80 marker:text-primary">
           {profile.interestGroups.map((group) => (
             <li key={group.title}>
               <span className="font-semibold text-foreground">{group.title}:</span>{" "}
@@ -47,18 +47,18 @@ function Index() {
           ))}
         </ul>
         <p
-          className="mt-6 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
+          className="mt-6 max-w-none text-justify text-[1.0625rem] leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
           dangerouslySetInnerHTML={{ __html: profile.introII }}
         />
         <p
-          className="mt-8 max-w-none text-justify text-lg leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
+          className="mt-8 max-w-none text-justify text-[1.0625rem] leading-relaxed text-foreground/80 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4 [&_a]:transition [&_a:hover]:brightness-75 dark:[&_a:hover]:brightness-125 whitespace-pre-line"
           dangerouslySetInnerHTML={{ __html: profile.introIII }}
         />
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link
             to="/research"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:opacity-90"
+            className="group inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:opacity-90 dark:border-foreground/25"
           >
             View Research
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
@@ -67,19 +67,19 @@ function Index() {
             href={profile.links.cv}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-foreground/25 bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent dark:border-foreground/35"
           >
             <FileText className="size-4" />
             View CV
           </a>
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center gap-6 text-lg text-muted-foreground">
+        <div className="mt-6 flex flex-wrap items-center gap-6 text-lg text-foreground/80">
           <a
             href={profile.links.email}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-foreground"
+            className="inline-flex origin-left items-center gap-2 transition-transform hover:scale-105 hover:text-foreground"
           >
             <Mail className="size-6" /> Email
           </a>
@@ -87,7 +87,7 @@ function Index() {
             href={profile.links.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-foreground"
+            className="inline-flex origin-left items-center gap-2 transition-transform hover:scale-105 hover:text-foreground"
           >
             <Twitter className="size-6" /> X / Twitter
           </a>
@@ -95,7 +95,7 @@ function Index() {
             href={profile.links.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-foreground"
+            className="inline-flex origin-left items-center gap-2 transition-transform hover:scale-105 hover:text-foreground"
           >
             <Github className="size-6" /> GitHub
           </a>
@@ -103,7 +103,7 @@ function Index() {
             href={profile.links.scholar}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-foreground"
+            className="inline-flex origin-left items-center gap-2 transition-transform hover:scale-105 hover:text-foreground"
           >
             <GraduationCap className="size-6" /> Google Scholar
           </a>
